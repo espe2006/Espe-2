@@ -1,0 +1,114 @@
+/* 1. Définition des Variables et Font (Style Vinted) */
+:root {
+    --color-main: #00b991;     /* Vert Vinted (Turquoise foncé) */
+    --color-light: #e0f2f1;    /* Vert très pâle pour les fonds légers */
+    --color-text-dark: #2c3e50; /* Gris-bleu foncé pour le texte principal */
+    --color-text-body: #607d8b; /* Gris subtil pour le corps du texte */
+    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Police claire et moderne */
+}
+
+/* 2. Style de Base et Typographie */
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light); /* Fond très clair */
+    color: var(--color-text-body);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Conteneur principal : Style "Card" moderne */
+body > * {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: white; 
+    border-radius: 8px; /* Coins légèrement arrondis */
+    /* Ombre subtile pour donner de la profondeur sans être lourd */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    border-top: 5px solid var(--color-main); /* Touche de couleur en haut */
+}
+
+/* 3. Titres et Hiérarchie */
+h1 {
+    color: var(--color-main);
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--color-text-dark);
+    font-size: 1.8em;
+    font-weight: 600;
+    /* Sous-ligne subtile */
+    border-bottom: 2px solid var(--color-light); 
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+h3, h4 {
+    color: var(--color-text-dark);
+    margin-top: 25px;
+    font-weight: 500;
+}
+
+/* 4. Texte et Paragraphes */
+p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Mise en évidence du texte (Italique) */
+em {
+    color: var(--color-main);
+    font-weight: 600;
+}
+
+/* Style de la boîte de citation (Fable) */
+blockquote {
+    border-left: 4px solid var(--color-main); /* Ligne de couleur Vinted */
+    background-color: var(--color-light);
+    padding: 20px 30px;
+    margin: 30px 0;
+    border-radius: 4px;
+    font-style: italic;
+    color: var(--color-text-dark);
+    /* Animation subtile de survol pour imiter les cartes interactives */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+blockquote:hover {
+    /* Augmenter l'ombre et la soulever légèrement au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); 
+}
+
+/* 5. Effets de Couleurs Vinted */
+
+/* Accentuation sur le nom et la date */
+p strong {
+    color: var(--color-main);
+    font-weight: 700;
+}
+
+/* Accentuation de la première ligne d'un paragraphe */
+p:nth-of-type(3) { /* Paragraphe d'histoire */
+    border-top: 1px solid var(--color-light);
+    padding-top: 15px;
+}
+
+/* Style pour la première lettre du paragraphe d'histoire */
+p:nth-of-type(3)::first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: 1;
+    padding-right: 8px;
+    font-weight: 700;
+    color: var(--color-main);
+}

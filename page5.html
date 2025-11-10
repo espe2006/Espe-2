@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tableaux Élégants</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="table-container">
+      <h1>TABLEAU 1: Simple</h1>
+      <table class="table-style">
+        <tr>
+          <td colspan="2" class="cell-main">RGL1</td>
+        </tr>
+        <tr>
+          <td class="cell-sub"><strong>RGL2</strong></td>
+          <td class="cell-detail">RGL3</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <h1>TABLEAU 2: Améliorer</h1>
+      <table class="table-style" id="tableau-rotation">
+        <tr>
+          <td rowspan="2" class="cell-main cell-rotate">RMS1</td>
+          <td class="cell-sub">RMS2</td>
+        </tr>
+        <tr>
+          <td class="cell-detail">RMS3</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="table-container">
+      <h1>TABLEAU 3: Complexe</h1>
+      <table class="table-style">
+        <tr>
+          <td class="cell-main" colspan="3">A</td>
+        </tr>
+        <tr>
+          <td class="cell-main" rowspan="2">B</td>
+          <td class="cell-main" colspan="2">C</td>
+        </tr>
+        <tr>
+          <td class="cell-detail">D</td> 
+          <td class="cell-detail">E</td>
+        </tr>
+      </table>
+    </div>
+    
+  </body>
+</html>

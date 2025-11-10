@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cinéma Tables</title>
+    <link rel="stylesheet" href="tableau.css">
+</head>
+<body>
+    
+   <table id="flight-manifest">
+    <caption>✈ Manifeste du Vol Boeing 730 - Destination Inconnue 🌌</caption>
+    <thead> 
+        <tr> 
+            <th>Nom</th> 
+            <th>Age</th> 
+            <th>Pays</th> 
+        </tr> 
+    </thead> 
+    <tbody>
+        <tr>  
+            <td>François</td> 
+            <td>43 ans</td> 
+            <td>France</td> 
+        </tr> 
+        <tr> 
+            <td>Carmen</td> 
+            <td>33 ans</td> 
+            <td>Espagne</td> 
+        </tr> 
+        <tr> 
+            <td>Michelle</td> 
+            <td>26 ans</td> 
+            <td>États-Unis</td> 
+        </tr> 
+        <tr> 
+            <td>Martine</td> 
+            <td>34 ans</td> 
+            <td>France</td> 
+        </tr> 
+        <tr> 
+            <td>Jonathan</td> 
+            <td>13 ans</td> 
+            <td>Australie</td> 
+        </tr> 
+        <tr> 
+            <td>Xu</td> 
+            <td>19 ans</td> 
+            <td>Chine</td> 
+        </tr> 
+    </tbody> 
+    <tfoot> 
+        <tr> 
+            <td colspan="3">6 passagers à bord. Préparez-vous à l'embarquement.</td> 
+        </tr> 
+    </tfoot> 
+   </table>
+
+ <br><br>
+
+ <table id="movie-ratings-h"> 
+    <caption>🍿 Programme du Soir : Classifications par Âge (Horizontal) 🎟</caption>
+    <thead>
+        <tr> 
+            <th>Titre du film</th> 
+            <th>Pour enfants ?</th> 
+            <th>Pour adolescents ?</th> 
+        </tr> 
+    </thead>
+    <tbody>
+        <tr> 
+            <td>Massacre à la tronçonneuse</td> 
+            <td class="negative-rating">Non, trop violent</td> 
+            <td class="positive-rating">Oui</td> 
+        </tr> 
+        <tr> 
+            <td>Les bisounours font du ski</td> 
+            <td class="positive-rating">Oui, adapté</td> 
+            <td class="negative-rating">Pas assez violent...</td> 
+        </tr> 
+        <tr> 
+            <td>Lucky Luke, seul contre tous</td> 
+            <td colspan="2" class="all-ages">Pour toute la famille ! 🤠</td> 
+        </tr> 
+    </tbody>
+ </table> 
+
+ <br><br>
+
+<table id="movie-ratings-v"> 
+    <caption>🎬 Fiche Technique des Films (Vertical) 📜</caption>
+    <thead>
+        <tr> 
+            <th class="vertical-header">Caractéristique</th> 
+            <th>Massacre à la tronçonneuse</th> 
+            <th>Les bisounours font du ski</th> 
+            <th>Lucky Luke, seul contre tous</th> 
+        </tr> 
+    </thead>
+    <tbody>
+        <tr> 
+            <th class="vertical-header">Pour enfants ?</th> 
+            <td class="negative-rating">Non, trop violent</td> 
+            <td class="positive-rating">Oui, adapté</td> 
+            <td rowspan="2" class="all-ages">Pour toute la famille ! 🌠</td> 
+        </tr> 
+        <tr> 
+            <th class="vertical-header">Pour adolescents ?</th> 
+            <td class="positive-rating">Oui</td> 
+            <td class="negative-rating">Pas assez violent...</td> 
+        </tr> 
+    </tbody>
+</table> 
+
+</body>
+</html>

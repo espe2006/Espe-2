@@ -1,0 +1,160 @@
+/* 1. Base et Réinitialisation */
+:root {
+    --main-bg-color: #1c1c1c; /* Fond sombre */
+    --text-color: #f0f0f0; /* Texte clair */
+    --accent-color: #ff6600; /* Orange vif pour l'accentuation */
+    --secondary-color: #333333; /* Gris foncé pour les cartes */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 2. En-tête (Header) et Navigation */
+.site-header {
+    background-color: #252525;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 15px 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-list a:hover {
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+}
+
+/* 3. Section Héro (Bienvenue) */
+.hero-section {
+    height: 70vh; /* 70% de la hauteur de la vue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Petit dégradé subtil pour le fond */
+    background: linear-gradient(135deg, var(--main-bg-color), #0a0a0a); 
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.hero-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #ff8533;
+    transform: translateY(-2px); /* Petit effet de soulèvement */
+}
+
+/* 4. Section d'Information (Cartes) */
+.info-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-section h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    transition: transform 0.3s;
+    border-top: 3px solid var(--accent-color);
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Effet de profondeur au survol */
+}
+
+.card h4 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* 5. Pied de Page (Footer) */
+.site-footer {
+    background-color: #252525;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.site-footer p {
+    font-size: 0.9em;
+    color: #999999;
+}

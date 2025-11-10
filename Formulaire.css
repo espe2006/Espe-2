@@ -1,0 +1,141 @@
+/* -----------------------------------
+   Style Général du Corps (body)
+   ----------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+    background-color: #f4f7f6; /* Arrière-plan très clair */
+    display: flex; /* Centrer le formulaire */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* -----------------------------------
+   Style du Conteneur Principal (form)
+   ----------------------------------- */
+form {
+    background-color: #ffffff; /* Fond blanc pur pour le formulaire */
+    padding: 40px;
+    border-radius: 12px; /* Coins arrondis pour un look doux */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre subtile pour le faire ressortir */
+    width: 100%;
+    max-width: 600px; /* Limiter la largeur pour la lisibilité */
+}
+
+/* -----------------------------------
+   Style des Sections (fieldset ou div)
+   ----------------------------------- */
+fieldset, .section-box {
+    border: none; /* Retirer la bordure par défaut de fieldset */
+    padding: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0; /* Séparateur léger */
+    padding-bottom: 20px;
+}
+
+fieldset:last-of-type, .section-box:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* -----------------------------------
+   Style des Étiquettes (labels)
+   ----------------------------------- */
+label {
+    display: block; /* Mettre l'étiquette sur une ligne séparée */
+    margin-bottom: 8px;
+    font-weight: 600; /* Texte de l'étiquette en gras */
+    color: #333;
+}
+
+/* -----------------------------------
+   Style des Champs de Saisie (input, textarea)
+   ----------------------------------- */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Toute la largeur moins le padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Bordure discrète */
+    border-radius: 6px;
+    box-sizing: border-box; /* S'assurer que padding et border ne changent pas la largeur */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition douce pour l'effet de focus */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre légère au focus */
+    outline: none; /* Retirer la bordure de focus par défaut du navigateur */
+}
+
+textarea {
+    resize: vertical; /* Permettre uniquement le redimensionnement vertical */
+    min-height: 100px;
+}
+
+/* -----------------------------------
+   Style des Boutons Radio (radio)
+   ----------------------------------- */
+.radio-group label {
+    display: inline-block; /* Aligner les options sur la même ligne */
+    margin-right: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* -----------------------------------
+   Style des Boutons (submit et reset)
+   ----------------------------------- */
+button,
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 15px;
+}
+
+/* Bouton "Soumettre" */
+input[type="submit"] {
+    background-color: #007bff; /* Bleu primaire */
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+    transform: translateY(-2px); /* Léger soulèvement */
+}
+
+/* Bouton "Réinitialiser" */
+input[type="reset"] {
+    background-color: #6c757d; /* Gris secondaire */
+    color: white;
+}
+
+input[type="reset"]:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+body {
+    /* ... autres styles de body ... */
+
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); 
+    /* Ce dégradé va d'un bleu très pâle à un gris clair, en diagonale (135 degrés) */
+    
+    /* Assurez-vous d'avoir toujours ces propriétés si vous utilisez un dégradé ou une image */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}

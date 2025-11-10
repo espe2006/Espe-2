@@ -1,0 +1,190 @@
+/* Importation d'une police professionnelle (facultatif mais recommandé) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----------------------------------
+   Style Général et Corps
+   ----------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif; /* Police moderne et lisible */
+    line-height: 1.6; /* Améliore la lisibilité */
+    background-color: #f4f7f6; /* Fond très clair */
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 900px; /* Limite la largeur pour une meilleure lecture */
+    margin: 40px auto; /* Centre le CV sur la page */
+    background-color: #ffffff; /* Fond blanc pur pour le contenu */
+    padding: 50px;
+    border-radius: 10px; /* Bords légèrement arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de "feuille" */
+}
+
+/* -----------------------------------
+   En-tête (Nom et Contact)
+   ----------------------------------- */
+.header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #007bff; /* Ligne de séparation de couleur (bleu professionnel) */
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.title-profession {
+    font-size: 1.2em;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 3px 0;
+}
+
+.contact-info a {
+    color: #007bff; /* Couleur pour les liens */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* -----------------------------------
+   Sections et Titres
+   ----------------------------------- */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #007bff; /* Couleur du titre de section */
+    font-size: 1.6em;
+    border-bottom: 2px solid #e0e0e0; /* Soulignement léger */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* -----------------------------------
+   Expériences et Formations
+   ----------------------------------- */
+.job-entry, .education-entry {
+    margin-bottom: 20px;
+    padding-left: 15px; /* Décalage pour un style 'timeline' */
+    border-left: 3px solid #f0f0f0;
+}
+
+.job-entry h3, .education-entry h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.company-name, .school-name {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.job-dates {
+    font-weight: bold;
+    color: #555;
+    font-style: normal;
+}
+
+.job-entry ul {
+    list-style-type: none; /* Retirer les puces par défaut */
+    padding-left: 0;
+}
+
+.job-entry ul li {
+    padding-left: 1.5em; /* Espace pour une puce personnalisée */
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.job-entry ul li:before {
+    content: '•'; /* Puce personnalisée (cercle) */
+    position: absolute;
+    left: 0;
+    color: #007bff; /* Couleur de la puce */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+/* -----------------------------------
+   Compétences (Skills)
+   ----------------------------------- */
+.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    background-color: #e9f5ff; /* Fond bleu très pâle pour les tags */
+    color: #007bff;
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px 8px 5px 0;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Option pour le body ou un header de section */
+body {
+    /* REMPLACEZ le background existant par celui-ci si vous voulez le motif */
+    
+    /* 1. Couleur de base */
+    background-color: #f4f7f6; 
+    
+    /* 2. Le motif de points (très pâle) */
+    background-image: radial-gradient(#d3d3d3 1px, transparent 0);
+    background-size: 15px 15px; /* Espace entre les points */
+    
+    /* 3. Assurez-vous que le CV est bien mis en évidence */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.section-profile {
+    /* Ligne décorative en bas de section */
+    border-bottom: 1px solid #e0e0e0;
+    /* Marge pour séparer */
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.skills-list li {
+    background-color: #e9f5ff; /* Fond Bleu TRES PÂLE */
+    color: #007bff; /* Texte Bleu accent */
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px 8px 5px 0;
+    border-radius: 5px; /* Douceur des coins */
+    font-size: 0.9em;
+    font-weight: 500;
+    /* Ajout d'une ombre légère pour un effet 3D subtil */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+}

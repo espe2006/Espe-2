@@ -1,0 +1,106 @@
+/* 1. Variables de Couleurs (Nuances de Gris) */
+:root {
+    --color-dark-slate: #2c3e50;    /* Gris ardoise foncé (Textes/Bordures) */
+    --color-medium-gray: #7f8c8d;   /* Gris moyen (Accentuation) */
+    --color-light-mist: #ecf0f1;    /* Gris brumeux clair (Fond du tableau) */
+    --color-background: #f7f9fa;    /* Blanc cassé très léger */
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Fond "Pluie/Brume" */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark-slate);
+    min-height: 100vh;
+    
+    /* Dégradé doux pour l'effet de brume */
+    background: linear-gradient(180deg, var(--color-background) 0%, #e8e8e8 100%); 
+    
+    /* Ajout d'une texture très subtile pour l'effet de pluie/gouttelettes */
+    background-image: radial-gradient(circle at 1px 1px, var(--color-medium-gray) 1px, transparent 0);
+    background-size: 50px 50px;
+}
+
+/* 3. Conteneur Général du Tableau */
+.table-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px var(--color-shadow);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.table-container:hover {
+    box-shadow: 0 15px 35px var(--color-shadow);
+    transform: translateY(-2px);
+}
+
+/* 4. Titres */
+h1 {
+    font-weight: 300; /* Police légère */
+    font-size: 1.8em;
+    color: var(--color-dark-slate);
+    text-align: center;
+    border-bottom: 1px solid var(--color-medium-gray);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* 5. Style du Tableau */
+.table-style {
+    width: 100%;
+    border-collapse: collapse; /* Bordures nettes */
+    border: 2px solid var(--color-dark-slate);
+    border-radius: 8px;
+    overflow: hidden; /* Assure que le border-radius fonctionne */
+}
+
+td {
+    padding: 15px 10px;
+    border: 1px solid var(--color-medium-gray);
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: var(--color-light-mist);
+}
+
+/* Styles spécifiques aux classes de cellules */
+.cell-main {
+    background-color: var(--color-dark-slate);
+    color: white;
+    font-weight: 700;
+}
+
+.cell-sub {
+    background-color: var(--color-medium-gray);
+    color: var(--color-dark-slate);
+    font-weight: 400;
+}
+
+.cell-detail {
+    background-color: var(--color-light-mist);
+    color: var(--color-dark-slate);
+}
+
+/* 6. EFFET DE ROTATION POUR RMS1 (Tableau 2) */
+#tableau-rotation .cell-rotate {
+    /* Retirer la couleur de fond pour un effet visuel de bordure */
+    background-color: transparent; 
+    border-color: var(--color-medium-gray);
+    color: var(--color-dark-slate);
+    
+    /* Transformation CSS pour renverser le contenu de 180 degrés */
+    transform: rotate(90deg); 
+    transition: transform 0.5s;
+    
+    /* S'assure que la rotation se fait bien */
+    display: table-cell; 
+    vertical-align: middle;
+}

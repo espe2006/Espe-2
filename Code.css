@@ -1,0 +1,152 @@
+/* 1. Variables de Couleur (Palette Forêt) */
+:root {
+    --color-feuille-claire: #a3b899; /* Vert menthe doux */
+    --color-mousse: #778859;       /* Vert mousse profond */
+    --color-terre: #4f3b3b;        /* Brun terre foncé */
+    --color-tronc: #352f2b;        /* Brun très foncé pour le texte */
+    --color-sable: #f4f2e9;        /* Blanc cassé / Crème */
+    
+    --font-heading: 'Merriweather', serif; /* Serif Classique pour les titres */
+    --font-body: 'Lato', sans-serif;      /* Sans-serif moderne pour le corps */
+}
+
+/* 2. Style de Base et Fond Paysage */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 40px 0;
+    line-height: 1.6;
+    color: var(--color-tronc);
+    min-height: 100vh;
+    
+    /* Fond : Dégradé doux et motif texturé pour l'effet "Paysage" */
+    background: 
+        /* Motif subtil de papier/texture */
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="%23f4f2e9"/><path d="M0 0h1v1H0zM2 2h1v1H2z" fill="%23e8e6df" opacity="0.5"/></svg>'),
+        /* Dégradé doux de vert clair à brun terre */
+        linear-gradient(to bottom right, var(--color-sable), var(--color-feuille-claire)); 
+    background-blend-mode: multiply; /* Fusionne le motif avec le dégradé */
+}
+
+/* 3. Conteneurs de Section (Blocs organiques) */
+.section-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Blanc semi-transparent */
+    border-radius: 15px; /* Coins arrondis, aspect plus doux */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--color-mousse); /* Bordure latérale verte (mousse) */
+    transition: transform 0.3s;
+}
+
+.section-container:hover {
+    transform: translateY(-3px); /* Effet de légèreté */
+}
+
+/* 4. Titres */
+h1 {
+    font-family: var(--font-heading);
+    color: var(--color-mousse);
+    font-size: 2.8em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--color-terre);
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--color-feuille-claire);
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* 5. Listes et Définitions (Mise en valeur organique) */
+ul, ol, dl {
+    margin-left: 20px;
+}
+
+/* Toutes les puces (li) */
+li, dd {
+    font-size: 1.1em;
+    padding: 5px 0;
+    border-bottom: 1px dotted var(--color-sable);
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: var(--color-sable); /* Survol très léger */
+}
+
+/* Définitions */
+dt {
+    font-weight: bold;
+    color: var(--color-mousse);
+    margin-top: 10px;
+}
+
+/* Listes non ordonnées: Utiliser une image personnalisée pour les puces */
+ul:not(.pas_de_retrait) li {
+    /* Utilisation d'un caractère UTF-8 (feuille ou goutte) pour la puce personnalisée */
+    list-style: none;
+}
+ul:not(.pas_de_retrait) li::before {
+    content: "🌿"; /* Emoji Feuille pour la puce */
+    color: var(--color-mousse);
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+/* Listes ordonnées: Numérotation en couleur */
+ol li {
+    color: var(--color-tronc);
+}
+
+/* 6. Styles spécifiques aux démonstrations de listes */
+
+/* Retrait */
+.pas_de_retrait {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+/* Types de Puces UL */
+.puce1 li::before { content: "🌼"; } /* Circle */
+.puce2 li::before { content: "🌲"; } /* Square */
+.puce3 li::before { content: ""; }   /* None */
+
+/* Types de Puces OL (Numérotation) */
+.commence_a_zero { list-style-type: decimal-leading-zero; }
+.lettres_minuscules { list-style-type: lower-alpha; }
+.chiffres_romains { list-style-type: upper-roman; }
+.lettres_grecques { list-style-type: lower-greek; }
+
+
+/* 7. Styles pour le Récit Personnel */
+.recit-personnel p {
+    font-family: var(--font-heading);
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 8px 0;
+}
+
+#premier {
+    color: var(--color-mousse);
+    border-left: 4px solid var(--color-mousse);
+    padding-left: 10px;
+}
+
+#second {
+    color: var(--color-tronc);
+    text-align: right;
+    border-right: 4px solid var(--color-terre);
+    padding-right: 10px;
+}
+
+.separation {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-terre), rgba(0, 0, 0, 0));
+}

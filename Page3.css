@@ -1,0 +1,198 @@
+/* 1. Variables et Fonts Néo-Rétro */
+:root {
+    --color-bg-dark: #0f0f1d;          /* Bleu très foncé, presque noir */
+    --color-neon-cyan: #00ffff;        /* Cyan Néon */
+    --color-neon-magenta: #ff00ff;     /* Magenta Néon */
+    --color-grid: rgba(0, 255, 255, 0.1); /* Lignes de grille transparentes */
+    --font-heading: 'Orbitron', sans-serif; /* Titres futuristes */
+    --font-body: 'Share Tech Mono', monospace; /* Texte du corps "code" */
+}
+
+/* 2. Style de Base et Fond Animé */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    color: var(--color-neon-cyan);
+    background-color: var(--color-bg-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    /* Motif de grille et scanlines pour l'effet Néo-Rétro */
+    background-image: 
+        repeating-linear-gradient(0deg, var(--color-grid), var(--color-grid) 1px, transparent 1px, transparent 30px),
+        repeating-linear-gradient(90deg, var(--color-grid), var(--color-grid) 1px, transparent 1px, transparent 30px);
+    background-size: 30px 30px;
+    animation: scanlines 5s linear infinite; /* Animation de la grille */
+}
+
+@keyframes scanlines {
+    to { background-position: 0 30px; }
+}
+/* 3. Logos (Barre Fixe en Haut) */
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Utiliser un fond très sombre mais plus transparent pour l'intégration */
+    background-color: rgba(15, 15, 30, 0.7); /* Plus transparent */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Ombre diffuse et légère */
+    z-index: 1000;
+}
+
+.logos-container img {
+    /* Nouvelle taille pour élargir les logos */
+    height: 80px; /* Augmenter la hauteur pour des logos plus larges */
+    width: auto; 
+    transition: filter 0.4s, transform 0.4s;
+
+    /* --- EFFET POUR ENLEVER LE FOND BLANC ET INTÉGRER --- */
+    /* Si les logos ont un fond blanc, ce filtre va le rendre transparent ou l'atténuer. */
+    /* Le 'drop-shadow' donne un effet lumineux sans bordure. */
+    
+    /* Option 1: Si les logos ont un fond blanc net (le plus probable) */
+    /* Utilisez 'filter: drop-shadow' pour donner une aura lumineuse et ignorer le fond blanc. */
+    /* Et potentiellement 'invert' si le logo est noir sur blanc et que vous voulez le changer. */
+    
+    /* Pour la plupart des logos, essayez ceci: */
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5)); /* Une aura lumineuse discrète */
+    
+    /* Si vos logos sont noirs sur fond blanc et que vous voulez les rendre clairs sur fond sombre, ajoutez: */
+    /* filter: invert(1) drop-shadow(0 0 5px rgba(0, 255, 255, 0.5)); */
+    /* Mais testez d'abord sans invert(1) */
+}
+
+.logos-container a:hover img {
+    /* Effet de survol renforcé */
+    filter: drop-shadow(0 0 15px var(--color-neon-magenta)) brightness(1.2); /* Plus de brillance et d'ombre */
+    transform: scale(1.15); /* Zoom plus important au survol */
+}
+
+/* Autres sections, comme le H1, restent inchangées ou ajustées précédemment */
+.content h1 {
+    font-size: 2.8em; /* Légèrement plus grand que 2.5em si vous voulez, mais moins que l'original */
+    margin-top: 100px; 
+    text-shadow: 0 0 10px var(--color-neon-magenta);
+}
+
+.profile-photo {
+    height: 200px; /* Élargir la photo de profil également pour plus d'impact */
+    width: 200px;
+    border: 7px solid var(--color-neon-magenta); /* Bordure légèrement plus épaisse */
+    box-shadow: 0 0 25px var(--color-neon-magenta);
+}
+.profile-photo:hover {
+    transform: rotate(360deg) scale(1.05); /* Zoom léger en plus de la rotation */
+}
+
+
+
+/* 4. Contenu Principal */
+.content-wrapper {
+    max-width: 900px;
+    margin: 150px auto 40px auto; /* Espace pour la barre fixe */
+    padding: 0 20px;
+}
+
+.content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--color-neon-magenta);
+    font-size: 3.5em;
+    text-shadow: 0 0 10px var(--color-neon-magenta), 0 0 20px var(--color-neon-magenta); /* Effet Néon */
+    margin-top: 0;
+    animation: glitch 3s infinite; /* Animation de Glitch */
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0.05em 0 0 var(--color-neon-cyan), -0.05em 0 0 var(--color-neon-magenta); }
+    14% { text-shadow: none; }
+    15% { text-shadow: 0.05em 0 0 var(--color-neon-cyan), -0.05em 0 0 var(--color-neon-magenta); }
+    16% { text-shadow: none; }
+    /* ... variations subtiles ... */
+    100% { text-shadow: 0.05em 0 0 var(--color-neon-cyan), -0.05em 0 0 var(--color-neon-magenta); }
+}
+
+h2 {
+    color: var(--color-neon-cyan);
+    font-size: 2em;
+    font-weight: 400;
+    border-bottom: 1px solid var(--color-neon-cyan);
+    padding-bottom: 5px;
+}
+
+/* 5. Section et Blocs d'Information */
+.section {
+    background: rgba(30, 30, 50, 0.8); /* Bloc de données semi-transparent */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--color-neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px); /* Se soulève au survol */
+    box-shadow: 0 0 25px var(--color-neon-magenta);
+}
+
+.section h3 {
+    color: var(--color-neon-magenta);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-neon-cyan);
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* 6. Mise en forme de la Photo */
+.profile-photo {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Forme circulaire */
+    border: 5px solid var(--color-neon-magenta);
+    margin: 30px auto;
+    box-shadow: 0 0 20px var(--color-neon-magenta);
+    transition: transform 0.5s;
+    filter: saturate(1.5); /* Couleurs plus intenses */
+}
+.profile-photo:hover {
+    transform: rotate(360deg); /* La photo tourne au survol ! */
+}
+
+/* 7. Listes et Infos (Détails) */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: var(--color-bg-dark);
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 5px solid var(--color-neon-cyan);
+    transition: border-color 0.3s, background 0.3s;
+}
+
+li:hover {
+    border-left-color: var(--color-neon-magenta);
+    background: rgba(40, 40, 70, 0.8);
+}
+
+.section p span {
+    color: var(--color-neon-magenta);
+    font-weight: bold;
+}
